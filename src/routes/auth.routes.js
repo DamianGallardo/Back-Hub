@@ -5,7 +5,9 @@ import sql from "mssql";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+
 const router = Router();
+
 
 // Middleware para manejar cuerpos de solicitud en formato JSON
 router.use(express.json());
@@ -14,7 +16,6 @@ router.use(express.json());
 router.post("/register", async (req, res) => {
     try {
         const pool = await getConnection();
-        // Encriptar la contraseña
         const hashedPassword = await bcrypt.hash(req.body.Password, 10);
         const result = await pool
             .request()
@@ -78,7 +79,7 @@ function createToken(user) {
         user_id: user.UserID,
         user_role: user.Role
     };
-    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+    return jwt.sign(payload, process.env.JWT_SECRET || 'default_secret_key', { expiresIn: '1h' });
 }
 
 export default router;

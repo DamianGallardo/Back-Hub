@@ -24,4 +24,4 @@ USE HubMovies;
 --     UpdatedAt DATETIME NULL
 -- );
 
--- SELECT * FROM users;
+SELECT * FROM users;
