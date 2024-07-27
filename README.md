@@ -44,7 +44,7 @@ GET ALL
 ![alt text](src/assets/imageID.png)
 GET ID
 
-![alt text](src/assets/imagePUT.png)
+![alt text](src/assets/imagePut.png)
 PUT ID
 
 ![alt text](src/assets/imagePOST.png)
@@ -52,6 +52,9 @@ POST
 
 ![alt text](src/assets/imageDEL.png)
 DELETE
+
+![alt text](src/assets/imageDiagrama.png)
+Diagrama Entidad Relacion
 
 ### 6. Tabla con Sprint Review 
 
